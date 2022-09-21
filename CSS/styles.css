@@ -1,0 +1,13 @@
+table {
+    width: 550px;
+    border: 1px solid black;
+ }
+ th, td {
+    border: 1px solid #000;
+}
+
+.tabla{
+    overflow: hidden;
+    /* background-color: yellow; */
+    width: 550px;
+}

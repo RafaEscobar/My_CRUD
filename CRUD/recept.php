@@ -51,7 +51,7 @@
     }else{
         // ERROR GENERAL #1 -NO SE HA ENVIADO EL FORMULARIO-
         $errores .= 'NO SE HA ENVIADO NINGUN FORMULARIO <br />';
-        header('Location: http://localhost/CursoPHP/CRUD/');
+        header('Location: http://127.0.0.1/CursoPHP/MyCRUD/');
     }
 
     if(!empty($errores)){
