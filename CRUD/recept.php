@@ -27,11 +27,8 @@
                 $ejecucion = mysqli_query($conex, $consul_inset);
 
                 if($ejecucion){
-                    ?>
-                        <script>
-                            alert('VALORES ALMACENADOS');
-                        </script>
-                    <?php
+                    echo "<script language='JavaScript'> alert('Los datos fueron insertados'); </script>";
+                    header('Location: http://127.0.0.1/CursoPHP/MyCRUD/CRUD/panel.php');
                 }else{
                     echo 'ERROR FATAL';
                 }

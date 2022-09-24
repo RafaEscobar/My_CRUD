@@ -69,7 +69,7 @@
                         <?php echo "<a href='../CRUD/edit.php?User_Id=".$fila['User_Id']."'>EDITAR</a>"; ?>
                     </td>
                     <td>
-                        <?php echo "<a href='../CRUD/edit.php?User_Id=".$fila['User_Id']."'>ELIMINAR</a>"; ?>
+                        <?php echo "<a href='../CRUD/delete.php?User_Id=".$fila['User_Id']."'>ELIMINAR</a>"; ?>
                     </td>
                 </tr>
 
