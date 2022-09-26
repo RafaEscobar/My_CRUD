@@ -48,7 +48,7 @@
                 -->
                 <!-- 
                     ESTE WHILE AL EJECUTARSE MUESTRA EN CADA VUELTA LOS
-                    VALORES SOLICITADOS, QUE ESTE EN LA FILA DE TURNO 
+                    VALORES SOLICITADOS, QUE ESTEN EN LA FILA DE TURNO 
                 -->
                 <!-- 
                     Los valores rescatados con la funcion antes mencionada, 
@@ -59,6 +59,7 @@
                 <?php
                     while($fila=mysqli_fetch_assoc($resul_consul)){
                 ?>
+                <!-- Abrimos una fila para la tabla -->
                 <tr>
                     <!-- <?php //print_r($fila); ?>  --> <!-- para ver el array asociativo-->
                     <!-- 
@@ -73,18 +74,19 @@
                             <!-- 
                                 LOS TD SON CELDAS, Y CADA UNA REPRESENTA UN CAMPO, EN ESTE EJEMPLO TENEMOS DOS CAMPOS, -Nombre- y -Email-
                             -->
+                            <!-- Imprimimos directamente con echo, los valores del array asociativo, por medio del nombre del campo en la BD  -->
                     <td><?php echo $fila['User_nom']; ?></td>
                     <td><?php echo $fila['User_email'] ?></td>
                     <!-- 
                         #6: Enviamos manualmente con el principio del metodo GET, el valor del ID rescatado de la BD que corresponde a la fila de la cual el btn EDITAR O BORRAR haya sido pulsado.-->
                             <!-- 
-                                EN CADA VUELTA EL VALOR DEL ID QUE SE RESCATA DE LA BASE DE DATOS SE ALMACENA* EN LA URL QUE SE CONTRUYE AQUI EN CADA BTN  
+                                EN CADA VUELTA EL VALOR DEL ID QUE SE RESCATA DE LA BASE DE DATOS SE ALMACENA* EN LA (variable) DE LA URL, QUE SE CONTRUYE AQUI EN CADA ETIQUETA <a>
                             -->
                     <td>
-                        <?php echo "<a href='../CRUD/edit.php?User_Id=".$fila['User_Id']."'>EDITAR</a>"; ?>
+                        <?php echo "<a href='../CRUD/edit.php?Id=".$fila['User_Id']."'>EDITAR</a>"; ?>
                     </td>
                     <td>
-                        <?php echo "<a href='../CRUD/delete.php?User_Id=".$fila['User_Id']."'>ELIMINAR</a>"; ?>
+                        <?php echo "<a href='../CRUD/delete.php?Id=".$fila['User_Id']."'>ELIMINAR</a>"; ?>
                     </td>
                 </tr>
 
@@ -100,5 +102,4 @@
         ?>
     </div>
 </body>
-
 </html>
